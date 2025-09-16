@@ -13,38 +13,24 @@ def Draw_all(x,y):
 def first_move_right():
     print('right')
     for x in range(400,780,5):
-        clear_canvas()
-        character.draw_now(x, 90)
-        grass.draw_now(400, 30)
-        delay(0.01)
+        Draw_all(x,90)
     pass
 def second_move_right():
     for x in range(20,400,5):
         clear_canvas()
-        character.draw_now(x, 90)
-        grass.draw_now(400, 30)
-        delay(0.01)
+        Draw_all(x,90)
     pass
 def move_left():
     for x in range(780,20,-5):
-        clear_canvas()
-        character.draw_now(x, 560)
-        grass.draw_now(400, 30)
-        delay(0.01)
+        Draw_all(x,560)
     pass
 def move_up():
     for y in range(90, 560,+5):
-        clear_canvas()
-        character.draw_now(780, y)
-        grass.draw_now(400, 30)
-        delay(0.01)
+        Draw_all(780,y)
     pass
 def move_down():
     for y in range(560,90,-5):
-        clear_canvas()
-        character.draw_now(20, y)
-        grass.draw_now(400, 30)
-        delay(0.01)
+        Draw_all(20,y)
     pass
 
 def move_rectangle():
@@ -63,14 +49,16 @@ def move_circle():
         angle = math.radians(i)
         x = 400 + radius * math.cos(angle)
         y = 300 + radius * math.sin(angle)
-        clear_canvas()
-        character.draw_now(x, y)
-        grass.draw_now(400, 30)
-        delay(0.01)
+        Draw_all(x,y)
     pass
 def two_triangle_segments():
-    for x in range():
-
+    y = 90
+    for x in range(780, 400, -5):
+        Draw_all(x, y)
+        y += 6.18 # x는 76번 이동하니 (580-90) / 76 = 6.18
+    for x in range(400, 20, -5):
+        Draw_all(x, y)
+        y -= 6.18
     pass # 아이디어는 first_move_right() 후 대각선 으로2번 이동
 # fill here
 def move_triangle():
@@ -82,8 +70,7 @@ while True:
     move_rectangle()
     move_triangle()
     move_circle()
-    break
-    #pass
+    pass
 
 
 close_canvas()
