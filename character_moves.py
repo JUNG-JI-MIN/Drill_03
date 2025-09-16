@@ -9,18 +9,22 @@ def move_rectangle():
 
 
 def move_circle():
-    print("Hello World, This is circle")
+    radius = 210
+    for i in range(271, -90, -1):
+        angle = math.radians(i)
+        x = 400 + radius * math.cos(angle)
+        y = 300 + radius * math.sin(angle)
+        clear_canvas_now()
+        character.draw_now(x, y)
+        delay(0.01)
     pass
-
 
 # fill here
 while True:
-    clear_canvas_now()
-    character.draw_now(400, 90)
     move_circle()
     move_rectangle()
-    delay(0.1)
-    pass
+    break
+    #pass
 
 
 close_canvas()
