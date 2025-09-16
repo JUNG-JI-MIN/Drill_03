@@ -1,11 +1,17 @@
 from pico2d import *
-
+import math
 open_canvas()
 
 character = load_image('character.png')
 grass = load_image('grass.png')
 
 def move_right():
+    print('right')
+    for x in range(400,780,5):
+        clear_canvas()
+        character.draw_now(x, 90)
+        grass.draw_now(400, 30)
+        delay(0.01)
     pass
 def move_left():
     pass
