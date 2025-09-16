@@ -19,6 +19,7 @@ while True:
     character.draw_now(400, 90)
     move_circle()
     move_rectangle()
+    delay(0.1)
     pass
 
 
