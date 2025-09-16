@@ -4,6 +4,11 @@ open_canvas()
 
 character = load_image('character.png')
 grass = load_image('grass.png')
+def Draw_all(x,y):
+    clear_canvas()
+    character.draw_now(x, y)
+    grass.draw_now(400, 30)
+    delay(0.01)
 
 def first_move_right():
     print('right')
@@ -64,6 +69,7 @@ def move_circle():
         delay(0.01)
     pass
 def two_triangle_segments():
+    for x in range():
 
     pass # 아이디어는 first_move_right() 후 대각선 으로2번 이동
 # fill here
