@@ -1,3 +1,4 @@
+#2022182036 정지민
 from pico2d import *
 import math
 open_canvas()
