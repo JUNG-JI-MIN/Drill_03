@@ -63,12 +63,19 @@ def move_circle():
         grass.draw_now(400, 30)
         delay(0.01)
     pass
+def two_triangle_segments():
 
+    pass # 아이디어는 first_move_right() 후 대각선 으로2번 이동
 # fill here
+def move_triangle():
+    first_move_right()
+    two_triangle_segments()
+    second_move_right()
+    pass
 while True:
-    move_circle()
-
     move_rectangle()
+    move_triangle()
+    move_circle()
     break
     #pass
 
